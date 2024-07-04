@@ -1,19 +1,28 @@
 <header class="header">
     <div class="header__container container">
         <div class="header__wrapper">
-            <div class="header__logo">Gericht</div>
+            <div class="header__logo"><img src="./images/svg/logo.svg" alt="logo"> <span>antools.</span></div>
             <nav class="header__nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#projects" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Pages</a></li>
-                    <li class="nav__item"><a href="#proccess" class="nav__link">Contact us</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <div class="nav__droppable"><a href="#about" class="nav__link">Categories</a> <img
+                                class="nav__down" src="./images/svg/down.svg" alt="dropdown"></div>
+                        <ul class="nav__dropped-menu">
+                            <li class="nav__dropped-item"><a href="">Category 1</a></li>
+                            <li class="nav__dropped-item"><a href="">Category 2</a></li>
+                            <li class="nav__dropped-item"><a href="">Category 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="#proccess" class="nav__link">My collections</a></li>
                     <li class="nav__item"><a href="#team" class="nav__link">Blog</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Landing</a></li>
+
                 </ul>
             </nav>
             <div class="header__buttons">
-                <img class="header__line" src="./images/svg/line.svg" alt="line">
-                <button class="header__button">Book table</button>
+
+                <button class="header__login">login</button>
+                <button class="header__signup">sign up</button>
             </div>
             <div class="header__burger burger">
                 <span class="burger__line"></span>
@@ -26,13 +35,25 @@
 
     <nav class="header__nav-mobile">
         <ul class="nav-mobile__list">
-            <li class="nav-mobile__item"><a href="#projects" class="nav-mobile__link">Home</a></li>
-            <li class="nav-mobile__item"><a href="#about" class="nav-mobile__link">Pages</a></li>
-            <li class="nav-mobile__item"><a href="#proccess" class="nav-mobile__link">Contact us</a></li>
+            <li class="nav-mobile__item"><a href="#home" class="nav-mobile__link">Home</a></li>
+            <li class="nav-mobile__item nav-mobile__item--dropdown">
+                <div class="nav-mobile__droppable"><a href="#about" class="nav-mobile__link">Categories</a> <img
+                        class="nav-mobile__down" src="./images/svg/down.svg" alt="dropdown"></div>
+                <ul class="nav-mobile__dropped-menu">
+                    <li class="nav-mobile__dropped-item"><a href="">Category 1</a></li>
+                    <li class="nav-mobile__dropped-item"><a href="">Category 2</a></li>
+                    <li class="nav-mobile__dropped-item"><a href="">Category 3</a></li>
+                </ul>
+            </li>
+            <li class="nav-mobile__item"><a href="#proccess" class="nav-mobile__link">My collections</a></li>
             <li class="nav-mobile__item"><a href="#team" class="nav-mobile__link">Blog</a></li>
-            <li class="nav-mobile__item"><a href="#contact" class="nav-mobile__link">Landing</a></li>
-            <li class="nav-mobile__item--line"><img class="header__line" src="./images/svg/line.svg" alt="line"></li>
-            <li class="nav__item"><button class="header__button">Book table</button></li>
+            <li class="nav-mobile__item"> <button class="nav-mobile__login">login</button></li>
+            <li class="nav-mobile__item"> <button class="nav-mobile__signup">sign up</button></li>
+
+
+
+
+
         </ul>
     </nav>
 </header>

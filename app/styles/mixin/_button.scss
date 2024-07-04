@@ -1,8 +1,10 @@
 @mixin button($mt: 64px) {
     margin-top: $mt;
-    background-color: $yellow;
+    background-color: $active;
     font-weight: 700;
     font-size: 16px;
     text-transform: capitalize;
-    padding: 8px 30px;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
 }

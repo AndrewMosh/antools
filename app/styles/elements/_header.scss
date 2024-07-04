@@ -1,5 +1,5 @@
 .header {
-    padding: 10px 0;
+    padding: 26px 0;
 
     &__wrapper {
         display: flex;
@@ -12,37 +12,42 @@
     }
 
     &__logo {
-        font-size: 40px;
-        text-transform: uppercase;
-        font-family: $fontMain;
+        font-size: 22px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
     }
 
     &__nav-mobile {
         display: none;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.681);
+        background-color: $menuBg;
         position: absolute;
         right: 0;
         width: 100%;
         padding: 20px 0;
         z-index: 5;
-        justify-content: center;
 
-        .nav-mobile__list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
+        .nav-mobile__dropped-item {
+            padding-left: 20px;
+            a {
+                color: $white;
+            }
         }
-
-        .nav-mobile__item--line {
-            text-align: center;
+        .nav-mobile__item {
+            padding-bottom: 10px;
         }
 
         .nav-mobile__link {
             color: $white;
-            font-family: $fontSecond;
+        }
+        .nav-mobile__login,
+        .nav-mobile__signup {
+            background: none;
+            color: $white;
+            text-transform: capitalize;
+            padding: 0;
         }
     }
 
@@ -57,21 +62,46 @@
             list-style: none;
             align-items: center;
             justify-content: space-around;
-            gap: 32px;
+            gap: 22px;
+            text-transform: capitalize;
 
             .nav__item {
                 margin-left: 20px;
+                cursor: pointer;
 
+                &--dropdown {
+                    position: relative;
+                }
+
+                .nav__droppable {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
                 .nav__link {
                     color: $white;
                     text-decoration: none;
                     font-size: 16px;
-                    font-family: $fontSecond;
-                    letter-spacing: 2px;
 
                     &:hover {
                         text-decoration: underline;
                     }
+                }
+
+                .nav__dropped-menu {
+                    max-width: 100%;
+                    position: absolute;
+                    top: 30px;
+                    flex-direction: column;
+                    gap: 20px;
+                    display: none;
+                    a {
+                        color: $white;
+                    }
+                }
+
+                .nav__active {
+                    display: flex;
                 }
             }
         }
@@ -83,22 +113,22 @@
 
     &__buttons {
         display: flex;
-        gap: 20px;
-        font-family: $fontSecond;
-        letter-spacing: 2px;
+        gap: 41px;
+        text-transform: capitalize;
 
         @media (max-width: 768px) {
             display: none;
         }
     }
 
-    &__button {
+    &__login {
         color: $white;
-        padding: 0;
         background: none;
+        text-transform: capitalize;
+    }
 
-        font-family: $fontSecond;
-        letter-spacing: 2px;
+    &__signup {
+        @include button(0);
     }
 
     &__burger {
@@ -117,10 +147,6 @@
 
 @media (max-width: 768px) {
     .header {
-        &__line {
-            transform: rotate(90deg);
-        }
-
         &__burger {
             display: flex;
         }

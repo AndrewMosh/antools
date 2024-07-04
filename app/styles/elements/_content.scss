@@ -1,6 +1,6 @@
 .content {
     position: relative;
-    color: $black;
+    color: $white;
 
     a {
         color: $active;
@@ -38,7 +38,7 @@
             line-height: 110%;
         }
 
-        @media(max-width: 390px) {
+        @media (max-width: 390px) {
             font-size: 26px;
             line-height: 110%;
         }
@@ -57,7 +57,7 @@
             line-height: 110%;
         }
 
-        @media(max-width: 390px) {
+        @media (max-width: 390px) {
             font-size: 24px;
             line-height: 110%;
         }
@@ -75,7 +75,7 @@
             font-size: 24px;
         }
 
-        @media(max-width: 390px) {
+        @media (max-width: 390px) {
             font-size: 22px;
         }
     }
@@ -88,7 +88,7 @@
             font-size: 20px;
         }
 
-        @media(max-width: 390px) {
+        @media (max-width: 390px) {
             font-size: 19px;
         }
     }
@@ -97,7 +97,7 @@
         font-weight: 400;
         font-size: 20px;
 
-        @media(max-width: 390px) {
+        @media (max-width: 390px) {
             font-size: 18px;
         }
     }

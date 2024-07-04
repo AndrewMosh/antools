@@ -1,16 +1,15 @@
-$fontMain: "CormorantUpright Regular";
-$fontSecond: "Open Sans";
+$fontMain: "Poppins";
+$fontSecond: "";
+$font-size-title: 50px;
+$font-size-title-mobile: 25px;
 
-$active: #fff;
-$activeHover: #fff;
-$activeVisited: #fff;
-$white: #ffffff;
-$black: #242424;
-$yellow: #dcca87;
-$font-size-title: 64px;
-$font-size-title-small: 23px;
-$font-size-title-mobile: 44px;
-$bg: #040404;
-$bgBooking: #0c0c0c;
+$active: #ff6e30;
+$activeHover: #f89c74;
+$activeVisited: #ff4d00;
+
+$whiteTitle: rgba(255, 255, 255, 0.9);
+$white: rgba(255, 255, 255, 0.55);
+$bg: rgb(30, 37, 43);
+$menuBg: rgba(0, 0, 0, 0.679);
 
 $transition: 0.25s;

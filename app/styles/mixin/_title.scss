@@ -1,4 +1,4 @@
-@mixin title($pb: null, $color: $yellow) {
+@mixin title($pb: null, $color: $active) {
     font-size: $font-size-title;
     line-height: 130%;
     padding-bottom: $pb;
