@@ -1,0 +1,9 @@
+@mixin text($pb: null) {
+    color: $white;
+    line-height: 30px;
+    padding-bottom: $pb;
+
+    @include for-mobile {
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,86 @@
+.main {
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+
+        justify-content: space-between;
+        gap: 40px;
+
+        @include for-mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        @include title(29px);
+        max-width: 600px;
+
+        span {
+            color: $active;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+
+        &--picture {
+            img {
+                @include for-mobile {
+                    max-width: 50%;
+                    margin: 0 auto;
+                }
+            }
+            @include for-mobile {
+                order: -1;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 487px;
+        @include text(60px);
+    }
+
+    &__input {
+        max-width: 497px;
+        background-color: rgb(40, 48, 54);
+        padding: 8px 18px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+
+        input {
+            background: none;
+            color: $white;
+
+            @media (max-width: 319px) {
+                width: 70%;
+            }
+        }
+    }
+
+    &__input-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__button {
+        @include button(0);
+
+        @include for-mobile {
+            padding: 5px;
+            font-size: 15px;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 12px;
+    }
+}

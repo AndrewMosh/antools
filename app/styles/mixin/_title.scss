@@ -1,4 +1,4 @@
-@mixin title($pb: null, $color: $active) {
+@mixin title($pb: null, $color: white) {
     font-size: $font-size-title;
     line-height: 130%;
     padding-bottom: $pb;
@@ -7,6 +7,6 @@
 
     @include for-mobile {
         font-size: $font-size-title-mobile;
-        line-height: 100%;
+        line-height: 120%;
     }
 }

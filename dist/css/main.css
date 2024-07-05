@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 html,
 body,
 div,
@@ -1174,11 +1172,16 @@ a {
   line-height: 120%;
 }
 
-/*А так убрать*/
-
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
   font-family: "Poppins";
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 
 .container {
@@ -1596,7 +1599,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 50px;
   line-height: 130%;
   padding-bottom: 32px;
-  color: #ff6e30;
+  color: white;
   text-transform: capitalize;
 }
 
@@ -1606,6 +1609,80 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .footer__socials img {
   cursor: pointer;
+}
+
+.main {
+  position: relative;
+}
+
+.main__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.main__title {
+  font-size: 50px;
+  line-height: 130%;
+  padding-bottom: 29px;
+  color: white;
+  text-transform: capitalize;
+  max-width: 600px;
+}
+
+.main__title span {
+  color: #ff6e30;
+}
+
+.main__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.main__text {
+  max-width: 487px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 30px;
+  padding-bottom: 60px;
+}
+
+.main__input {
+  max-width: 497px;
+  background-color: #283036;
+  padding: 8px 18px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.main__input input {
+  background: none;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.main__input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.main__button {
+  margin-top: 0;
+  background-color: #ff6e30;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+}
+
+.main__socials {
+  display: flex;
+  gap: 12px;
 }
 
 @media (max-width: 1280px) {
@@ -1770,7 +1847,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .footer__logo {
     font-size: 25px;
-    line-height: 100%;
+    line-height: 120%;
+  }
+
+  .main__wrapper {
+    flex-direction: column;
+  }
+
+  .main__title {
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .main__inner--picture img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .main__inner--picture {
+    order: -1;
+  }
+
+  .main__text {
+    line-height: 20px;
+  }
+
+  .main__button {
+    padding: 5px;
+    font-size: 15px;
   }
 }
 
@@ -1807,6 +1911,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .content h5 {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 319px) {
+  .main__input input {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

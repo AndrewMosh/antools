@@ -17,6 +17,7 @@
 @import "./mixin/res-ratio";
 @import "./mixin/title";
 @import "./mixin/button";
+@import "./mixin/text";
 
 @import "./fonts";
 @import "./setting/variables";
@@ -30,4 +31,4 @@
 @import "./elements/header";
 @import "./elements/footer";
 
-// @import "@Sections/main/main";
+@import "@Sections/main/main";
