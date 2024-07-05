@@ -1,10 +1,11 @@
-@mixin button($mt: 64px) {
+@mixin button($mt: 64px, $bg: $active) {
     margin-top: $mt;
     background-color: $active;
     font-weight: 700;
     font-size: 16px;
     text-transform: capitalize;
     color: white;
+    background-color: $bg;
     padding: 12px 28px;
     border-radius: 8px;
 }

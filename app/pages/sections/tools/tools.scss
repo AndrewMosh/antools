@@ -1,0 +1,77 @@
+.tools {
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__title {
+        @include title(25px);
+    }
+
+    &__text {
+        @include text(90px);
+        max-width: 427px;
+        margin: 0 auto;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 100px;
+    }
+
+    &__tool {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 33px;
+        text-align: left;
+        flex: 0 0 31%;
+        cursor: pointer;
+
+        &:hover {
+            border-radius: 15px;
+            backdrop-filter: blur(50px);
+            background: rgba(40, 48, 54, 0.6);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(40, 48, 54, 0.006) 35%, $active 100%);
+        }
+    }
+
+    &__name {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    &__subtitle-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__subtitle {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 24px;
+    }
+
+    &__price {
+        font-size: 18px;
+        color: rgb(255, 165, 55);
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__heart {
+        padding-right: 15px;
+    }
+
+    &__button {
+        @include button(0, $bg);
+        color: $white;
+    }
+}

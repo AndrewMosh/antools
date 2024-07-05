@@ -1569,6 +1569,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 16px;
   text-transform: capitalize;
   color: white;
+  background-color: #ff6e30;
   padding: 12px 28px;
   border-radius: 8px;
 }
@@ -1676,6 +1677,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-size: 16px;
   text-transform: capitalize;
   color: white;
+  background-color: #ff6e30;
   padding: 12px 28px;
   border-radius: 8px;
 }
@@ -1683,6 +1685,97 @@ input[type="search"]::-webkit-search-results-decoration {
 .main__socials {
   display: flex;
   gap: 12px;
+}
+
+.tools__wrapper {
+  text-align: center;
+}
+
+.tools__title {
+  font-size: 50px;
+  line-height: 130%;
+  padding-bottom: 25px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.tools__text {
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 30px;
+  padding-bottom: 90px;
+  max-width: 427px;
+  margin: 0 auto;
+}
+
+.tools__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 100px;
+}
+
+.tools__tool {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 33px;
+  text-align: left;
+  flex: 0 0 31%;
+  cursor: pointer;
+}
+
+.tools__tool:hover {
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background: rgba(40, 48, 54, 0.6);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(40, 48, 54, 0.006) 35%, #ff6e30 100%);
+}
+
+.tools__name {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.tools__subtitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tools__subtitle {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 24px;
+}
+
+.tools__price {
+  font-size: 18px;
+  color: #ffa537;
+}
+
+.tools__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tools__heart {
+  padding-right: 15px;
+}
+
+.tools__button {
+  margin-top: 0;
+  background-color: #ff6e30;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  background-color: #1e252b;
+  padding: 12px 28px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 @media (max-width: 1280px) {
@@ -1875,6 +1968,15 @@ input[type="search"]::-webkit-search-results-decoration {
   .main__button {
     padding: 5px;
     font-size: 15px;
+  }
+
+  .tools__title {
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .tools__text {
+    line-height: 20px;
   }
 }
 
