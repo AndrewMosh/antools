@@ -41,6 +41,7 @@ input {
 a {
     font-family: $fontMain, Arial, Helvetica, sans-serif;
     line-height: 120%;
+    color: $white;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

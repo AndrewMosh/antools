@@ -1,30 +1,58 @@
 .footer {
-    background-image: url("../../images/BG-1.png");
-    padding: 128px 0px;
-
-    @include for-tablet {
-        padding: 80px 0px;
-    }
-
-    @include for-mobile {
-        padding: 38px 0px;
-    }
+    padding: 70px 0;
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
 
     &__wrapper {
-        text-align: center;
+        @include text(0);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__logo,
+    &__title {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0%;
+        padding-bottom: 27px;
     }
 
     &__logo {
-        @include title(32px);
-    }
-
-    &__spoon {
-        padding: 26px 0;
-    }
-
-    &__socials {
         img {
-            cursor: pointer;
+            padding-right: 12px;
+        }
+    }
+
+    &__copyright {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        padding-bottom: 21px;
+    }
+
+    &__trivia {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0%;
+        max-width: 260px;
+    }
+
+    &__contact,
+    &__info,
+    &__categories {
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+
+        @media (max-width: 582px) {
+            width: 200px;
+        }
+
+        a {
+            @include text(0);
         }
     }
 }

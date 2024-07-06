@@ -1,0 +1,62 @@
+.contributor {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__title {
+        @include title(25px);
+    }
+
+    &__text {
+        @include text(100px);
+        max-width: 427px;
+        margin: 0 auto;
+
+        @include for-tablet {
+            padding-bottom: 50px;
+        }
+
+        @include for-mobile {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__input {
+        max-width: 549px;
+        background-color: rgb(40, 48, 54);
+        padding: 8px 18px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+        margin: 0 auto;
+
+        input {
+            background: none;
+            color: $white;
+
+            @media (max-width: 319px) {
+                width: 70%;
+            }
+        }
+    }
+
+    &__input-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__button {
+        @include button(0);
+        white-space: nowrap;
+        @include for-mobile {
+            padding: 5px;
+            font-size: 15px;
+        }
+    }
+}
