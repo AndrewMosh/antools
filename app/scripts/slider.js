@@ -15,6 +15,7 @@ class ReviewsSlider {
     }
 
     showSlide(index) {
+        this.currentSlide = index;
         this.slides.forEach((slide, i) => {
             slide.style.display = i === index ? "flex" : "none";
         });
@@ -30,13 +31,11 @@ class ReviewsSlider {
     }
 
     prevSlide() {
-        this.currentSlide = Math.max(this.currentSlide - 1, 0);
-        this.showSlide(this.currentSlide);
+        this.showSlide(this.currentSlide - 1);
     }
 
     nextSlide() {
-        this.currentSlide = Math.min(this.currentSlide + 1, this.slides.length - 1);
-        this.showSlide(this.currentSlide);
+        this.showSlide(this.currentSlide + 1);
     }
 
     addEventListeners() {
