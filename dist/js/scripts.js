@@ -16,7 +16,7 @@
   \*****************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./app/scripts/menu.js\");\n/* harmony import */ var _tools_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tools.js */ \"./app/scripts/tools.js\");\n\n\n\n//# sourceURL=webpack://antool/./app/scripts/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./app/scripts/menu.js\");\n/* harmony import */ var _tools_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tools.js */ \"./app/scripts/tools.js\");\n/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./slider.js */ \"./app/scripts/slider.js\");\n\n\n\n\n//# sourceURL=webpack://antool/./app/scripts/main.js?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _men
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const burger = document.querySelector(\".header__burger\");\n  const nav = document.querySelector(\".header__nav-mobile\");\n  burger.addEventListener(\"click\", () => {\n    nav.classList.toggle(\"header__nav-mobile--active\");\n  });\n});\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const dropdown = document.querySelector(\".nav__item--dropdown\");\n  const nav = document.querySelector(\".nav__dropped-menu\");\n  dropdown.addEventListener(\"click\", e => {\n    console.log(e.target);\n    nav.classList.toggle(\"nav__active\");\n  });\n});\ndocument.addEventListener(\"click\", e => {\n  const nav = document.querySelector(\".nav__dropped-menu\");\n  if (e.target.classList.value !== \"nav__droppable\" && e.target.classList.value !== \"nav__link\") {\n    nav.classList.remove(\"nav__active\");\n  }\n});\n\n//# sourceURL=webpack://antool/./app/scripts/menu.js?");
+
+/***/ }),
+
+/***/ "./app/scripts/slider.js":
+/*!*******************************!*\
+  !*** ./app/scripts/slider.js ***!
+  \*******************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\nclass ReviewsSlider {\n  constructor(selector) {\n    this.slider = document.querySelector(selector);\n    this.slides = this.slider.querySelectorAll(\".reviews-slider__slide\");\n    this.prevBtn = this.slider.querySelector(\".reviews-slider__btn--prev\");\n    this.nextBtn = this.slider.querySelector(\".reviews-slider__btn--next\");\n    this.dots = this.slider.querySelectorAll(\".reviews-slider__dot\");\n    this.currentSlide = 0;\n    this.init();\n  }\n  init() {\n    this.showSlide(this.currentSlide);\n    this.addEventListeners();\n  }\n  showSlide(index) {\n    this.slides.forEach((slide, i) => {\n      slide.style.display = i === index ? \"flex\" : \"none\";\n    });\n    this.dots.forEach((dot, i) => {\n      dot.classList.toggle(\"reviews-slider__dot--active\", i === index);\n    });\n    this.updateControls();\n  }\n  updateControls() {\n    this.prevBtn.disabled = this.currentSlide === 0;\n    this.nextBtn.disabled = this.currentSlide === this.slides.length - 1;\n  }\n  prevSlide() {\n    this.currentSlide = Math.max(this.currentSlide - 1, 0);\n    this.showSlide(this.currentSlide);\n  }\n  nextSlide() {\n    this.currentSlide = Math.min(this.currentSlide + 1, this.slides.length - 1);\n    this.showSlide(this.currentSlide);\n  }\n  addEventListeners() {\n    this.prevBtn.addEventListener(\"click\", () => this.prevSlide());\n    this.nextBtn.addEventListener(\"click\", () => this.nextSlide());\n    this.dots.forEach((dot, index) => {\n      dot.addEventListener(\"click\", () => this.showSlide(index));\n    });\n  }\n}\nnew ReviewsSlider(\".reviews-slider\");\n\n//# sourceURL=webpack://antool/./app/scripts/slider.js?");
 
 /***/ }),
 
