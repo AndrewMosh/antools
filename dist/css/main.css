@@ -1458,6 +1458,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .header {
   padding: 26px 0;
+  white-space: nowrap;
 }
 
 .header__wrapper {
@@ -1471,6 +1472,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   gap: 12px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__nav-mobile {
