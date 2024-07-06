@@ -1,19 +1,26 @@
-const blocks = document.querySelectorAll(".tools__tool");
-blocks.forEach((block) => {
-    const image = block.querySelector(".tools__heart");
-    const originalSrc = image.src;
-    const newSrc = "./images/svg/heart-red.svg";
-    const button = block.querySelector(".tools__button");
+const tools = document.querySelectorAll(".tools__tool");
+const newcomers = document.querySelectorAll(".newcomers__tool");
 
-    block.addEventListener("mouseenter", () => {
-        image.src = newSrc;
-        button.classList.remove("tools__button");
-        button.classList.add("button-transform");
-    });
+function addHover(blocks, element) {
+    blocks.forEach((block) => {
+        const image = block.querySelector(`.${element}__heart`);
+        const originalSrc = image.src;
+        const newSrc = "./images/svg/heart-red.svg";
+        const button = block.querySelector(`.${element}__button`);
 
-    block.addEventListener("mouseleave", () => {
-        image.src = originalSrc;
-        button.classList.remove("button-transform");
-        button.classList.add("tools__button");
+        block.addEventListener("mouseenter", () => {
+            image.src = newSrc;
+            button.classList.remove(`${element}__button`);
+            button.classList.add("button-transform");
+        });
+
+        block.addEventListener("mouseleave", () => {
+            image.src = originalSrc;
+            button.classList.remove("button-transform");
+            button.classList.add(`${element}__button`);
+        });
     });
-});
+}
+
+addHover(tools, "tools");
+addHover(newcomers, "newcomers");
