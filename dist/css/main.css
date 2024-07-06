@@ -1184,6 +1184,18 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
 
+.button-transform {
+  margin-top: 0;
+  background-color: #ff6e30;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  background-color: #ff6e30;
+  padding: 12px 28px;
+  border-radius: 8px;
+}
+
 .container {
   position: relative;
   width: 1248px;
@@ -1726,10 +1738,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .tools__tool:hover {
   border-radius: 15px;
+  background: rgba(40, 48, 54, 0.6);
+  background: linear-gradient(35deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0), #ff6e3065 110%);
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
-  background: rgba(40, 48, 54, 0.6);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(40, 48, 54, 0.006) 35%, #ff6e30 100%);
 }
 
 .tools__name {

@@ -31,9 +31,16 @@
 
         &:hover {
             border-radius: 15px;
-            backdrop-filter: blur(50px);
             background: rgba(40, 48, 54, 0.6);
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(40, 48, 54, 0.006) 35%, $active 100%);
+            background: linear-gradient(
+                35deg,
+                rgba(255, 255, 255, 0.08),
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.05),
+                rgba(255, 255, 255, 0),
+                #ff6e3065 110%
+            );
+            backdrop-filter: blur(50px);
         }
     }
 

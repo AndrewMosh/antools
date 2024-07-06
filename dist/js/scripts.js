@@ -10,23 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./app/scripts/datePicker.js":
-/*!***********************************!*\
-  !*** ./app/scripts/datePicker.js ***!
-  \***********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\nconst dateInput = document.getElementById(\"start\");\ndateInput.addEventListener(\"click\", () => {\n  dateInput.showPicker();\n});\n\n//# sourceURL=webpack://antool/./app/scripts/datePicker.js?");
-
-/***/ }),
-
 /***/ "./app/scripts/main.js":
 /*!*****************************!*\
   !*** ./app/scripts/main.js ***!
   \*****************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./app/scripts/menu.js\");\n/* harmony import */ var _datePicker_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./datePicker.js */ \"./app/scripts/datePicker.js\");\n\n\n\n//# sourceURL=webpack://antool/./app/scripts/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./app/scripts/menu.js\");\n/* harmony import */ var _tools_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tools.js */ \"./app/scripts/tools.js\");\n\n\n\n//# sourceURL=webpack://antool/./app/scripts/main.js?");
 
 /***/ }),
 
@@ -37,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _men
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const burger = document.querySelector(\".header__burger\");\n  const nav = document.querySelector(\".header__nav-mobile\");\n  burger.addEventListener(\"click\", () => {\n    nav.classList.toggle(\"header__nav-mobile--active\");\n  });\n});\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const dropdown = document.querySelector(\".nav__item--dropdown\");\n  const nav = document.querySelector(\".nav__dropped-menu\");\n  dropdown.addEventListener(\"click\", e => {\n    console.log(e.target);\n    nav.classList.toggle(\"nav__active\");\n  });\n});\ndocument.addEventListener(\"click\", e => {\n  const nav = document.querySelector(\".nav__dropped-menu\");\n  if (e.target.classList.value !== \"nav__droppable\" && e.target.classList.value !== \"nav__link\") {\n    nav.classList.remove(\"nav__active\");\n  }\n});\n\n//# sourceURL=webpack://antool/./app/scripts/menu.js?");
+
+/***/ }),
+
+/***/ "./app/scripts/tools.js":
+/*!******************************!*\
+  !*** ./app/scripts/tools.js ***!
+  \******************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\nconst blocks = document.querySelectorAll(\".tools__tool\");\nblocks.forEach(block => {\n  const image = block.querySelector(\".tools__heart\");\n  const originalSrc = image.src;\n  const newSrc = \"./images/svg/heart-red.svg\";\n  const button = block.querySelector(\".tools__button\");\n  block.addEventListener(\"mouseenter\", () => {\n    image.src = newSrc;\n    button.classList.remove(\"tools__button\");\n    button.classList.add(\"button-transform\");\n  });\n  block.addEventListener(\"mouseleave\", () => {\n    image.src = originalSrc;\n    button.classList.remove(\"button-transform\");\n    button.classList.add(\"tools__button\");\n  });\n});\n\n//# sourceURL=webpack://antool/./app/scripts/tools.js?");
 
 /***/ })
 
