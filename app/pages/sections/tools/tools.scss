@@ -40,6 +40,8 @@
         flex: 0 0 31%;
         cursor: pointer;
         position: relative;
+        transition: $transition;
+        border-radius: 15px;
 
         @media (max-width: 1024px) {
             flex: 0 0 50%;
@@ -52,7 +54,6 @@
         }
 
         &:hover {
-            border-radius: 15px;
             background: rgba(40, 48, 54, 0.6);
             background: radial-gradient(
                 circle at 90% 10%,
@@ -104,5 +105,23 @@
     &__button {
         @include button(0, $bg);
         color: $white;
+
+        &--load {
+            border: 1px solid $white;
+            margin-top: 100px;
+            color: $active;
+
+            &:hover {
+                color: black;
+            }
+
+            @include for-tablet {
+                margin-top: 50px;
+            }
+
+            @media (max-width: 578px) {
+                margin-top: 20px;
+            }
+        }
     }
 }
