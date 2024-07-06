@@ -1,5 +1,6 @@
 .reviews-slider {
     position: relative;
+
     &__wrapper {
         padding: 0 140px;
 
@@ -15,7 +16,6 @@
     &__slide {
         display: flex;
         align-items: center;
-        padding: 2rem;
         gap: 57px;
 
         @media (max-width: 1024px) {
@@ -86,6 +86,7 @@
 
     &__text {
         @include text(0);
+        height: 40vh;
     }
 
     &__controls {
@@ -109,20 +110,20 @@
         &--prev {
             position: absolute;
             top: 50%;
-            left: 20px;
+            left: 0;
 
-            @media (max-width: 481px) {
-                left: 0;
+            @media (max-width: 484px) {
+                top: 30%;
             }
         }
 
         &--next {
             position: absolute;
             top: 50%;
-            right: 20px;
+            right: 0;
 
-            @media (max-width: 481px) {
-                right: 0;
+            @media (max-width: 484px) {
+                top: 30%;
             }
         }
 
@@ -134,6 +135,11 @@
     &__pagination {
         display: flex;
         align-items: center;
+        padding-top: 100px;
+
+        @media (max-width: 484px) {
+            padding-top: 20px;
+        }
     }
 
     &__dot {
