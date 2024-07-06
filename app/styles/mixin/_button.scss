@@ -8,4 +8,8 @@
     background-color: $bg;
     padding: 12px 28px;
     border-radius: 8px;
+
+    &:hover {
+        background-color: $activeHover;
+    }
 }
