@@ -53,15 +53,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
 
         input {
             background: none;
             color: $white;
-
-            @media (max-width: 319px) {
-                width: 70%;
-            }
         }
     }
 
@@ -73,9 +69,19 @@
     &__button {
         @include button(0);
 
-        @include for-mobile {
-            padding: 5px;
-            font-size: 15px;
+        @media (max-width: 368px) {
+            display: none;
+        }
+    }
+
+    &__button-hidden {
+        display: none;
+        margin: 0 auto;
+        @include button(40px);
+        font-size: 15px;
+
+        @media (max-width: 368px) {
+            display: block;
         }
     }
 
