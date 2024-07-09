@@ -22,6 +22,10 @@ section {
         padding: 50px 0;
     }
 }
+a,
+button {
+    transition: $transition;
+}
 
 sup {
     font-size: 10px;
@@ -78,5 +82,20 @@ input[type="search"]::-webkit-search-results-decoration {
     @media (max-width: 768px) {
         width: 100%;
         padding: 0 10px;
+    }
+}
+
+.fade {
+    animation: fade 0.5s ease-in-out;
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 }

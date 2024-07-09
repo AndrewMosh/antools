@@ -18,6 +18,7 @@ class ReviewsSlider {
         this.currentSlide = index;
         this.slides.forEach((slide, i) => {
             slide.style.display = i === index ? "flex" : "none";
+            slide.classList.add("fade");
         });
         this.dots.forEach((dot, i) => {
             dot.classList.toggle("reviews-slider__dot--active", i === index);
